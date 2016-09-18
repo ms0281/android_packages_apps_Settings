@@ -18,4 +18,15 @@
 <resources>
     <!-- Fingerprint -->
     <dimen name="fingerprint_find_sensor_padding_top">16dp</dimen>
+
+    <attr name="customPreferenceStyle" format="reference" />
+
+    <!-- Base attributes available to CustomSeekBarPreference. --> 
+    <declare-styleable name="CustomSeekBarPreference">
+        <attr name="interval" format="integer" /> 
+        <attr name="min" format="integer" /> 
+        <attr name="max" format="integer" /> 
+        <attr name="units" format="string|reference" />
+    </declare-styleable>
+
 </resources>
