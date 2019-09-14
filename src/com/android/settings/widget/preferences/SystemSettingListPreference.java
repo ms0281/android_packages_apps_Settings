@@ -17,6 +17,7 @@
 package com.android.settings.widget.preferences;
 
 import android.content.Context;
+import androidx.preference.EditTextPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 
