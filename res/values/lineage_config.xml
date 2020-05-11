@@ -34,4 +34,8 @@
 
     <!-- Whether to show peak refresh rate in display settings -->
     <bool name="config_show_peak_refresh_rate_switch">false</bool>
+    
+    <!-- Battery Health -->
+    <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
+    <string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
 </resources>
