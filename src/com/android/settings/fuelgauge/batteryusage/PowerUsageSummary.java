@@ -76,11 +76,6 @@ public class PowerUsageSummary extends PowerUsageBase implements
     private static final String KEY_CURRENT_BATTERY_CAPACITY = "current_battery_capacity";
     private static final String KEY_DESIGNED_BATTERY_CAPACITY = "designed_battery_capacity";
 
-    private static final String FILENAME_BATTERY_DESIGN_CAPACITY =
-            "/sys/class/power_supply/bms/charge_full_design";
-    private static final String FILENAME_BATTERY_CURRENT_CAPACITY =
-            "/sys/class/power_supply/bms/charge_full";
-
     @VisibleForTesting
     PowerUsageFeatureProvider mPowerFeatureProvider;
     @VisibleForTesting
@@ -268,8 +263,8 @@ public class PowerUsageSummary extends PowerUsageBase implements
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
 
-        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(FILENAME_BATTERY_CURRENT_CAPACITY));
-        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(FILENAME_BATTERY_DESIGN_CAPACITY));
+        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryCalculatedCapacity)));
+        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryDesignCapacity)));
     }
 
     @VisibleForTesting
