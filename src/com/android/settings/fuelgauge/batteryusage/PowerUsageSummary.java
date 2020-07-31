@@ -102,6 +102,8 @@ public class PowerUsageSummary extends PowerUsageBase implements
     @VisibleForTesting
     Preference mBatteryUsagePreference;
 
+    boolean mBatteryHealthSupported;
+
     @VisibleForTesting
     final ContentObserver mSettingsObserver = new ContentObserver(new Handler()) {
         @Override
@@ -187,6 +189,12 @@ public class PowerUsageSummary extends PowerUsageBase implements
                 KEY_DESIGNED_BATTERY_CAPACITY);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
 
+        mBatteryHealthSupported = getResources().getBoolean(R.bool.config_supportBatteryHealth);
+        if (!mBatteryHealthSupported) {
+            getPreferenceScreen().removePreference(mCurrentBatteryCapacity);
+            getPreferenceScreen().removePreference(mDesignedBatteryCapacity);
+        }
+
         if (Utils.isBatteryPresent(getContext())) {
             restartBatteryInfoLoader();
         } else {
@@ -263,8 +271,10 @@ public class PowerUsageSummary extends PowerUsageBase implements
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
 
-        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryCalculatedCapacity)));
-        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryDesignCapacity)));
+        if (mBatteryHealthSupported) {
+            mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryCalculatedCapacity)));
+            mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryDesignCapacity)));
+        }
     }
 
     @VisibleForTesting
@@ -361,5 +371,18 @@ public class PowerUsageSummary extends PowerUsageBase implements
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.power_usage_summary);
+            new BaseSearchIndexProvider(R.xml.power_usage_summary) {
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+
+                    if (!context.getResources().getBoolean(R.bool.config_supportBatteryHealth)) {
+                        keys.add(KEY_CURRENT_BATTERY_CAPACITY);
+                        keys.add(KEY_DESIGNED_BATTERY_CAPACITY);
+                    }
+
+                    return keys;
+                }
+    };
 }
