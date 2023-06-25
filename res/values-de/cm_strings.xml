@@ -121,4 +121,6 @@
     <string name="smart_charging_reset_stats_title">Akkustatistik zurücksetzen</string>
     <string name="smart_charging_reset_stats_summary">Setzen Sie die Akkustatistik zurück, nachdem der benutzerdefinierte Ladezustand erreicht wurde</string>
     <string name="smart_charging_footer">Intelligentes Laden erlaubt Ihnen das einstellen des maximalen Ladepegels, um die Lebensdauer Ihres Akkus zu verlängern</string>
+
+    <string name="assisted_gps_summary">Satellitenhilfsdaten aus dem Internet herunterladen, die den Startvorgang von GPS erheblich verbessern können. Für Notrufe ist das unterstützte GPS immer erlaubt.</string>
 </resources>
