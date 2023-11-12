@@ -123,4 +123,8 @@
     <string name="smart_charging_footer">Intelligentes Laden erlaubt Ihnen das einstellen des maximalen Ladepegels, um die Lebensdauer Ihres Akkus zu verlängern</string>
 
     <string name="assisted_gps_summary">Satellitenhilfsdaten aus dem Internet herunterladen, die den Startvorgang von GPS erheblich verbessern können. Für Notrufe ist das unterstützte GPS immer erlaubt.</string>
+    
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Wischen für Screenshot</string>
+    <string name="three_finger_gesture_summary">Wischen Sie mit drei Fingern nach unten, um einen Screenshot zu machen</string>
 </resources>
