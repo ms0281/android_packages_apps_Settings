@@ -111,4 +111,8 @@
     <string name="smart_charging_level_title">Stopp-Triggerpegel</string>
     <string name="smart_charging_resume_level_title">Start-Triggerpegel</string>
     <string name="smart_charging_footer">Intelligentes Laden erlaubt Ihnen das einstellen des maximalen Ladepegels, um die Lebensdauer Ihres Akkus zu verlängern</string>
+    
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Wischen für Screenshot</string>
+    <string name="three_finger_gesture_summary">Wischen Sie mit drei Fingern nach unten, um einen Screenshot zu machen</string>
 </resources>
