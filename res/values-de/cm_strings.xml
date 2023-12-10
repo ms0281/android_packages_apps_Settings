@@ -130,4 +130,12 @@
     
     <!-- Battery Temperature -->
     <string name="battery_temp">Akkutemperatur</string>
+    
+    <!-- Battery charge warning -->
+    <string name="notification_sound_battery_charge_title">Warnung zum Akkuladezustand aktivieren</string>
+    <string name="notification_battery_charge_level_title">Akkuladewarnung</string>
+    <string name="notification_battery_charge_level_summary">Spielen Sie einen Ton ab, wenn der Akku beim Laden einen bestimmten Ladestand erreicht</string>
+    <string name="notification_battery_charge_level_seek_bar">Akkustand</string>
+    <string name="notification_battery_charge_level_ringtone">Klingelton</string>
+    <string name="notification_battery_charge_level_silent">Stumm</string>
 </resources>
