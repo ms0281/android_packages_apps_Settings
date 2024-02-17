@@ -78,6 +78,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     static final int MENU_ADVANCED_BATTERY = Menu.FIRST + 1;
     public static final int DEBUG_INFO_LOADER = 3;
 
+    private static final String KEY_BATTERY_TEMP = "battery_temp";
+    
     @VisibleForTesting
     PowerGaugePreference mScreenUsagePref;
     @VisibleForTesting
@@ -90,6 +92,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
     LayoutPreference mBatteryLayoutPref;
     @VisibleForTesting
     BatteryInfo mBatteryInfo;
+    @VisibleForTesting
+    PowerGaugePreference mBatteryTempPref;
 
     @VisibleForTesting
     BatteryHeaderPreferenceController mBatteryHeaderPreferenceController;
@@ -218,6 +222,8 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
         mScreenUsagePref = (PowerGaugePreference) findPreference(KEY_SCREEN_USAGE);
         mLastFullChargePref = (PowerGaugePreference) findPreference(
                 KEY_TIME_SINCE_LAST_FULL_CHARGE);
+        
+        mBatteryTempPref = (PowerGaugePreference) findPreference(KEY_BATTERY_TEMP);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
 
         if (Utils.isBatteryPresent(getContext())) {
@@ -300,6 +306,11 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             restartBatteryTipLoader();
         } else {
             mNeedUpdateBatteryTip = true;
+        }
+        if (BatteryInfo.batteryTemp != 0f) {
+            mBatteryTempPref.setSummary(BatteryInfo.batteryTemp / 10 + " °C");
+        } else {
+            mBatteryTempPref.setSummary(getResources().getString(R.string.status_unavailable));
         }
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
