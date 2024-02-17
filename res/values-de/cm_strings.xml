@@ -101,4 +101,7 @@
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Zum Screenshot wischen</string>
     <string name="three_finger_gesture_summary">Wischen Sie mit drei Fingern nach unten, um einen Screenshot zu machen</string>
+    
+    <!-- Battery Temperature -->
+    <string name="battery_temp">Akkutemperatur</string>
 </resources>
