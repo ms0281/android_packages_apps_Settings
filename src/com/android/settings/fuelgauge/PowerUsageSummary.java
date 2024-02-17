@@ -123,6 +123,7 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
                 public void onLoadFinished(Loader<BatteryInfo> loader, BatteryInfo batteryInfo) {
                     mBatteryHeaderPreferenceController.updateHeaderPreference(batteryInfo);
                     mBatteryInfo = batteryInfo;
+                    mBatteryTempPref.setSummary(mBatteryInfo.batteryTemp + " \u2103");
                     updateLastFullChargePreference();
                 }
 
@@ -306,11 +307,6 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
             restartBatteryTipLoader();
         } else {
             mNeedUpdateBatteryTip = true;
-        }
-        if (BatteryInfo.batteryTemp != 0f) {
-            mBatteryTempPref.setSummary(BatteryInfo.batteryTemp / 10 + " °C");
-        } else {
-            mBatteryTempPref.setSummary(getResources().getString(R.string.status_unavailable));
         }
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
