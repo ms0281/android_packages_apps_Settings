@@ -112,4 +112,10 @@
     <string name="notification_battery_charge_level_seek_bar">Akkustand</string>
     <string name="notification_battery_charge_level_ringtone">Klingelton</string>
     <string name="notification_battery_charge_level_silent">Stumm</string>
+    
+    <!-- Battery health -->
+    <string name="current_battery_capacity">Aktuelle Akkukapazität</string>
+    <string name="current_battery_capacity_summary">Die aktuell vom Kernel gemessene Kapazität</string>
+    <string name="designed_battery_capacity">Angegebene Akkukapazität</string>
+    <string name="designed_battery_capacity_summary">Die vom Hersteller angegebene Kapazität</string>
 </resources>
