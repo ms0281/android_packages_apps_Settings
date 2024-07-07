@@ -118,4 +118,8 @@
     <string name="current_battery_capacity_summary">Die aktuell vom Kernel gemessene Kapazität</string>
     <string name="designed_battery_capacity">Angegebene Akkukapazität</string>
     <string name="designed_battery_capacity_summary">Die vom Hersteller angegebene Kapazität</string>
+    
+    <!-- Battery stats reset -->
+    <string name="battery_stats_reset">Statistiken zurücksetzen?</string>
+    <string name="battery_stats_message">Die Daten zum Akkuverbrauch gehen verloren</string>
 </resources>
