@@ -122,4 +122,14 @@
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Statistiken zurücksetzen?</string>
     <string name="battery_stats_message">Die Daten zum Akkuverbrauch gehen verloren</string>
+    
+    <!-- Smart charging -->
+    <string name="smart_charging_title">Intelligentes Laden</string>
+    <string name="smart_charging_summary">Maximale Ladestufe einstellen</string>
+    <string name="smart_charging_switch_title">Intelligentes Laden nutzen</string>
+    <string name="smart_charging_level_title">Stopp-Triggerpegel</string>
+    <string name="smart_charging_resume_level_title">Start-Triggerpegel</string>
+    <string name="smart_charging_reset_stats_title">Akkustatistik zurücksetzen</string>
+    <string name="smart_charging_reset_stats_summary">Setzen Sie die Akkustatistik zurück, nachdem der benutzerdefinierte Ladezustand erreicht wurde</string>
+    <string name="smart_charging_footer">Intelligentes Laden erlaubt Ihnen das einstellen des maximalen Ladepegels, um die Lebensdauer Ihres Akkus zu verlängern</string>
 </resources>
