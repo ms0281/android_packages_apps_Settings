@@ -94,14 +94,17 @@ public final class BatterySettingsMigrateChecker extends BroadcastReceiver {
         final int threshold =
                 Settings.Global.getInt(resolver, Settings.Global.LOW_POWER_MODE_TRIGGER_LEVEL, 0);
         // Force refine the invalid scheduled battery level.
-        if (threshold < BatterySaverScheduleRadioButtonsController.TRIGGER_LEVEL_MIN
-                && threshold > 0) {
+        if ((threshold < 10 || threshold % 5 != 0) && threshold > 0) {
             Settings.Global.putInt(
                     resolver,
                     Settings.Global.LOW_POWER_MODE_TRIGGER_LEVEL,
                     BatterySaverScheduleRadioButtonsController.TRIGGER_LEVEL_MIN);
-            Log.w(TAG, "Reset invalid scheduled battery level from: " + threshold);
-        }
+            Log.w(TAG, "[BatteryMigrateChecker] Reset invalid trigger level: "
+                    + threshold + "% → "
+                    + BatterySaverScheduleRadioButtonsController.TRIGGER_LEVEL_MIN + "%");
+	} else if (threshold > 0) {
+            Log.d(TAG, "[BatteryMigrateChecker] Keeping user-defined trigger level: " + threshold + "%");
+	}
         // Force removing the 'schedule by routine' state.
         BatterySaverUtils.revertScheduleToNoneIfNeeded(context);
     }
