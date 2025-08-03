@@ -49,6 +49,7 @@ import com.android.settings.security.SecurityAdvancedSettings;
 import com.android.settings.security.SecuritySettings;
 import com.android.settings.system.SystemDashboardFragment;
 import com.android.settingslib.drawer.CategoryKey;
+import com.android.settings.security.LockscreenChargingSettingsFragment;
 
 import java.util.Map;
 
@@ -107,6 +108,8 @@ public class DashboardFragmentRegistry {
         PARENT_TO_CATEGORY_KEY_MAP.put(ConfigureNotificationSettings.class.getName(),
                 CategoryKey.CATEGORY_NOTIFICATIONS);
         PARENT_TO_CATEGORY_KEY_MAP.put(LockscreenDashboardFragment.class.getName(),
+                CategoryKey.CATEGORY_SECURITY_LOCKSCREEN);
+        PARENT_TO_CATEGORY_KEY_MAP.put(LockscreenChargingSettingsFragment.class.getName(),
                 CategoryKey.CATEGORY_SECURITY_LOCKSCREEN);
         PARENT_TO_CATEGORY_KEY_MAP.put(ZenModeSettings.class.getName(),
                 CategoryKey.CATEGORY_DO_NOT_DISTURB);

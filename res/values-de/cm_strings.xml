@@ -109,4 +109,12 @@
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Wischen für Screenshot</string>
     <string name="three_finger_gesture_summary">Wischen Sie mit drei Fingern nach unten, um einen Screenshot zu machen</string>
+
+    <!-- Lockscreen battery stats -->
+    <string name="lockscreen_battery_stats_title">Ladestatistik auf Sperrbildschirm anzeigen</string>
+    <string name="lockscreen_battery_stats_summary">Zeigt aktuelle Ladeströme, Spannung, Leistung und Temperatur</string>
+    <string name="lockscreen_battery_stats_ma_only_title">Immer mA anzeigen</string>
+    <string name="lockscreen_battery_stats_ma_only_summary">Zeigt den Ladestrom immer in mA, auch wenn er über 1A liegt</string>
+    <string name="lockscreen_charging_settings_title">Erweiterte Ladeinformationen</string>
+    <string name="lockscreen_charging_settings_summary">Zeigt aktuelle Ladedaten auf dem Sperrbildschirm</string>
 </resources>

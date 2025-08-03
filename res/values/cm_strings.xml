@@ -201,4 +201,12 @@
     <!-- Three-fingers-swipe to screenshot -->
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
+
+    <!-- Lockscreen battery stats -->
+    <string name="lockscreen_battery_stats_title">Show charging stats on lock screen</string>
+    <string name="lockscreen_battery_stats_summary">Displays current, voltage, power, and temperature during charging</string>
+    <string name="lockscreen_battery_stats_ma_only_title">Always show in mA</string>
+    <string name="lockscreen_battery_stats_ma_only_summary">Always show current in mA, even when above 1A</string>
+    <string name="lockscreen_charging_settings_title">Extended charging information</string>
+    <string name="lockscreen_charging_settings_summary">Displays current charging information on lock screen</string>
 </resources>

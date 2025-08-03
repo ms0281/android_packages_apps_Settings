@@ -89,6 +89,12 @@
             android:title="@string/lockscreen_double_line_clock_setting_toggle"
             android:summary="@string/lockscreen_double_line_clock_summary"
             settings:controller="com.android.settings.display.LockscreenClockPreferenceController" />
+
+        <Preference
+            android:key="lockscreen_charging_settings"
+            android:title="@string/lockscreen_charging_settings_title"
+            android:summary="@string/lockscreen_charging_settings_summary"
+            android:fragment="com.android.settings.security.LockscreenChargingSettingsFragment" />
     </PreferenceCategory>
 
     <PreferenceCategory
