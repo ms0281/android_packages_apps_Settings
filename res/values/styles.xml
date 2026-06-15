@@ -147,6 +147,7 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textAlignment">viewStart</item>
         <item name="android:minHeight">@dimen/min_tap_target_size</item>
+        <item name="android:maxLength">500</item>
     </style>
 
     <style name="wifi_section">
@@ -195,6 +196,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingStart">8dip</item>
         <item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Small</item>
+    </style>
+
+    <style name="vpn_app_management_version_title">
+        <item name="android:textAppearance">?android:attr/textAppearanceListItem</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="vpn_app_management_version_summary">
+        <item name="android:textAppearance">?android:attr/textAppearanceListItemSecondary</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
     </style>
 
     <style name="TextAppearance" parent="android:TextAppearance.DeviceDefault"/>
